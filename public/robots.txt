@@ -1,0 +1,26 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?utm_*
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://klikly.vercel.app/sitemap.xml
+
+# Crawl delay (optional - time between requests in seconds)
+Crawl-delay: 1
