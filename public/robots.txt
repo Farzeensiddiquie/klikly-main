@@ -20,7 +20,7 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://klikly.vercel.app/sitemap.xml
+Sitemap: https://klikly-v1.vercel.app/sitemap.xml
 
 # Crawl delay (optional - time between requests in seconds)
 Crawl-delay: 1

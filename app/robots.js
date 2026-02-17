@@ -19,7 +19,7 @@ export default function robots() {
         disallow: "/",
       },
     ],
-    sitemap: "https://klikly.vercel.app/sitemap.xml",
+    sitemap: "https://klikly-v1.vercel.app/sitemap.xml",
     crawlDelay: 1,
   };
 }

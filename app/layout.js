@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
   // Metadata Base for Social Images
-  metadataBase: new URL("https://klikly.vercel.app"),
+  metadataBase: new URL("https://klikly-v1.vercel.app"),
 
   // Basic SEO
   title: "Klikly | Where Design Meets Intelligence",
@@ -23,11 +23,11 @@ export const metadata = {
 
   // Structured Data for Schema.org
   alternates: {
-    canonical: "https://klikly.vercel.app",
+    canonical: "https://klikly-v1.vercel.app",
   },
 
   // Author & Copyright
-  authors: [{ name: "Klikly", url: "https://klikly.vercel.app" }],
+  authors: [{ name: "Klikly", url: "https://klikly-v1.vercel.app" }],
   creator: "Klikly",
   publisher: "Klikly Digital Agency",
 };
@@ -47,8 +47,8 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Klikly",
-    url: "https://klikly.vercel.app",
-    logo: "https://klikly.vercel.app/logo-512.png",
+    url: "https://klikly-v1.vercel.app",
+    logo: "https://klikly-v1.vercel.app/logo-512.png",
     description: "Award-winning digital agency specializing in brand identity, web design, and animated experiences.",
     address: {
       "@type": "PostalAddress",

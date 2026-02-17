@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF, useAnimations, OrbitControls } from "@react-three/drei";
 import { Suspense, useRef, useEffect } from "react";
 import * as THREE from "three";
 
@@ -14,12 +14,17 @@ function RobotModel({ url }) {
 
   // Play the first animation when loaded
   useEffect(() => {
+    if (!actions || Object.keys(actions).length === 0) return;
     const firstAction = Object.values(actions)[0];
-    if (firstAction) firstAction.reset().fadeIn(0.5).play();
+    if (firstAction) {
+      firstAction.clampWhenFinished = true;
+      firstAction.reset().fadeIn(0.5).play();
+    }
   }, [actions]);
 
   // Detect head bone if present
   useEffect(() => {
+    if (!scene) return;
     scene.traverse((child) => {
       if (child.name.toLowerCase().includes("head")) head.current = child;
     });
@@ -51,7 +56,11 @@ function RobotModel({ url }) {
 export default function RobotCanvas() {
   return (
     <div className="md:w-[40vw] w-[80vw] md:h-[80vh] h-[70vh] bg-transparent">
-      <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
+      <Canvas
+        camera={{ position: [0, 0, 6], fov: 45 }}
+        style={{ background: "transparent" }}
+        fallback={null}
+      >
         <ambientLight intensity={0.8} />
         <directionalLight position={[5, 5, 5]} intensity={1.2} />
         <Suspense fallback={null}>
@@ -63,4 +72,6 @@ export default function RobotCanvas() {
 }
 
 // ✅ Preload the model for instant appearance
-useGLTF.preload("/futuristic_flying_animated_robot_-_low_poly.glb");
+if (typeof window !== "undefined") {
+  useGLTF.preload("/futuristic_flying_animated_robot_-_low_poly.glb");
+}

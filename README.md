@@ -202,7 +202,7 @@ npm run lint         # Run ESLint
 
 - **WhatsApp**: +923096726374
 - **Email**: Through contact form
-- **Website**: https://klikly.com
+- **Website**: https://klikly-v1.vercel.app
 
 ## 🤝 Contributing
 

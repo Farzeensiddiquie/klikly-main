@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://klikly.vercel.app";
+  const baseUrl = "https://klikly-v1.vercel.app";
 
   return [
     {
