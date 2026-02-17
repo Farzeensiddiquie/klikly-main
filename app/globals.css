@@ -1,0 +1,50 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+.star-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.shooting-star {
+  animation: shoot 2.5s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes shoot {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(150px, -150px) scale(0.5); opacity: 0; }
+}
+::-webkit-scrollbar{
+  background: none;
+  width: 9px;
+  height: 30px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #0b5723ac;
+  border-radius: 5px;
+  border-top: 1px solid #61ed86ac;
+  border-bottom: 1px solid #61ed86ac;
+  border-right: 1px solid #0a551e;
+  
+ 
+}
+.cta{
+  background-image: url('../public/images/ctabg.jpg') ;
+  background-size: cover;
+ 
+}
