@@ -16,9 +16,9 @@ export const metadata = {
 
   // Icons & Favicons
   icons: {
-    icon: "images/favicon.ico",
-    shortcut: "images/favicon.ico",
-    apple: "/images/apple-touch-icon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 
   // Structured Data for Schema.org
@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
         
         {/* Additional Icons */}
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         
         {/* Preload fonts for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
